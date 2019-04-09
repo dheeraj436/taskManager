@@ -1,0 +1,51 @@
+Priority mapping
+
+Critical: 1
+High : 2
+Medium : 3
+Low : 4
+
+Post Url == http://localhost:8080/label
+
+Body
+====
+{
+    "labelName" : "Label 2",
+    "labelDescription" : "For Testing 2",
+    "delFlag": false
+}
+
+
+Post Url = http://localhost:8080/task
+
+Body
+=====
+
+{
+    "taskName" : "Running 3 km",
+    "taskDescription" : "You Should Run 3 KM Daily",
+    "taskAsignDate": "2019-04-10",
+    "priority" : 1,
+    "delFlag": false,
+    "labelId":2
+}
+
+Search Criteria 1.
+Find Next 2 days tasks >>>>>>
+
+Get Url = http://localhost:8080/task/search/findByNextTwoDaysTask
+
+Search Criteria 2.
+Find today task of particular label >>>>>>
+
+Get Url = http://localhost:8080/label/search/findByLabelNameAndAssignTaskDate?labelName=
+
+Search Criteria 3.
+Find All critical and high priority tasks >>>>>>
+
+Get Url = http://localhost:8080/task/search/findByPriority?priority=1
+
+
+
+
+
